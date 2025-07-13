@@ -7,7 +7,7 @@ from sklearn.preprocessing import MinMaxScaler
 from scipy.io import loadmat
 
 # load data
-dataset = loadmat('datasets/ns')
+dataset = loadmat('ns')
 X, D = dataset['features'], dataset['label_distribution']
 Xr, Xs, Dr, Ds = train_test_split(X, D, test_size=0.3, random_state=123)
 scaler = MinMaxScaler().fit(Xr)
